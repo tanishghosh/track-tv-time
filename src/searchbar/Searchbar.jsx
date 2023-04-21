@@ -21,15 +21,17 @@ export default function Searchbar() {
 
     return (
         <div>
-            <input type="text" name="search-bar" id="search-bar" onInput={setSearchTermOnInput} />
             <h2>{searchterm}</h2>
-            <ul>
-                {
-                    searchResults.length > 0 && searchResults.map((searchResult, i) => {
-                        return <li key={i}>{searchResult.original_name}</li>
-                    })
-                }
-            </ul>
+            <div>
+                <input type="text" name="search-bar" id="search-bar" onInput={setSearchTermOnInput} />
+                <div style={{ borderColor: 'black' }}>
+                    {
+                        searchResults.length > 0 && searchResults.map((searchResult, i) => {
+                            return (<div style={{ backgroundColor: 'gray', borderColor: 'black' }}><h3>{searchResult.original_name}</h3></div>)
+                        })
+                    }
+                </div>
+            </div>
         </div>
     )
 
