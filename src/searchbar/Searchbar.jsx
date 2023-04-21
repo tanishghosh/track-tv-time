@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import constants from '../constants.json'
+import './searchbar.css'
 
 export default function Searchbar() {
 
@@ -24,10 +25,10 @@ export default function Searchbar() {
             <h2>{searchterm}</h2>
             <div>
                 <input type="text" name="search-bar" id="search-bar" onInput={setSearchTermOnInput} />
-                <div style={{ borderColor: 'black' }}>
+                <div id="search-results-div" style={{ borderColor: 'black' }}>
                     {
                         searchResults.length > 0 && searchResults.map((searchResult, i) => {
-                            return (<div style={{ backgroundColor: 'gray', borderColor: 'black' }}><h3>{searchResult.original_name}</h3></div>)
+                            return (<div id={searchResult.id} style={{ backgroundColor: 'gray', borderColor: 'black' }}><h3 id={searchResult.id} className="search-results-div-div-h3">{searchResult.original_name}</h3></div>)
                         })
                     }
                 </div>
