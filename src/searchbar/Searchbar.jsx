@@ -28,7 +28,7 @@ export default function Searchbar() {
                 <div id="search-results-div" style={{ borderColor: 'black' }}>
                     {
                         searchResults.length > 0 && searchResults.map((searchResult, i) => {
-                            return (<div id={searchResult.id} style={{ backgroundColor: 'gray', borderColor: 'black' }}><h3 id={searchResult.id} className="search-results-div-div-h3">{searchResult.original_name}</h3></div>)
+                            return (<div id={searchResult.id} style={{ backgroundColor: 'gray', borderColor: 'black' }}><a href={`/view/${searchResult.id}`}><h3 id={searchResult.id} className="search-results-div-div-h3">{searchResult.original_name}</h3></a></div>)
                         })
                     }
                 </div>
