@@ -22,7 +22,7 @@ export default function Searchbar() {
 
     return (
         <div>
-            <h2>{searchterm}</h2>
+            {/* <h2>{searchterm}</h2> */}
             <div>
                 <input type="text" name="search-bar" id="search-bar" onInput={setSearchTermOnInput} />
                 <div id="search-results-div" style={{ borderColor: 'black' }}>
